@@ -1,0 +1,223 @@
+/* 
+ *  Debugging Parameters 
+ 
+
+* {
+	border: 1px solid red !important;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* */
+
+
+/* 
+ *  The basics 
+ */
+
+
+/* Fonts for this project */
+* {
+	font-family: "Lato", sans-serif;
+}
+
+/* Start with all major elements at 100% of parent */
+html, body, header, section, article, ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Provide a buffer around the outside of the entire page */
+body {
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+
+/*
+ *  Home-made framework for page grid, rows & columns
+ *  Based on 12-column grid for base width = 960
+ */
+
+
+.grid {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.row {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+}
+
+/* .col-1  { width:  8.33%; } */
+/* .col-2  { width: 16.66%; } */
+.col-3  { width: 25%;    }
+.col-4  { width: 33.33%; }
+/* .col-5  { width: 41.66%; } */
+.col-6  { width: 50%;    }
+/* .col-7  { width: 58.33%; } */
+/* .col-8  { width: 66.66%; } */
+.col-9 { width: 75%;    }
+/* .col-10 { width: 83.33%; } */
+/* .col-11 { width: 91.66%; } */
+.col-12 { width: 100%;   }
+
+
+/* 
+ *  Text Formatting
+ */
+
+
+/* Heading text */
+h1 {
+	font-size: 3.0em;
+}
+
+h2 {
+	font-size: xx-large;
+	color: darkgrey;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: xx-large;
+	margin-top: 10px;
+}
+
+h4 {
+	font-size: x-large;
+}
+
+/* Standard paragraph & link text */
+p, a {
+	font-size: 18px;
+	line-height: 1.2em;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+
+/* 
+ *  Other Project-Specific Formatting
+ */
+
+
+/* Additional formatting for header elements */
+.header-adorn {
+	margin-bottom: 0;
+	border-bottom: thick solid darkgrey;
+}
+
+#logo-image {
+	margin-top: 10px;
+	width: 156px;
+}
+
+.name-text {
+	text-align: right;
+}
+
+.col-9 h4 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+/* Additional formatting for portfolio description */
+#port-title {
+	margin-bottom: 0;
+}
+
+.menu-icon {
+	float: right;
+	display: none;
+}
+
+.menu-icon svg {
+	width: 32px;
+	fill: darkgray;
+}
+
+article p {
+	max-width: 30em;
+	margin-bottom: 0;
+	text-align: justify;
+}
+
+#port-desc-short {
+	display: none;
+}
+
+/* Additional formatting for portfolio list */
+.label-adorn {
+	margin-bottom: 0px;
+}
+
+.col-4 {
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: 150px;
+}
+
+.proj-link-text {
+	font-weight: bold;
+	color: darkgrey;
+}
+
+.proj-desc-text {
+	margin-top: 25px;
+}
+
+/* Additional formatting for footer */
+.footer-adorn {
+	margin-bottom: 0px;
+	border-top: thick solid darkgrey;
+	text-align: center;
+}
+
+
+/* 
+ *  Formatting for sidebox element
+ */
+
+
+.sidebox {
+	width: 290px;
+	height: 300px;
+	border: 3px solid;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+	background-color: lightgray;
+	position: absolute;
+	top: 220px;
+	left: -500px;
+}
+
+#sidebox-title {
+	padding: 15px 15px 0px 15px;
+	margin: 0px;
+	font-weight: bold;
+}
+
+#sidebox-text {
+	padding: 15px;
+	margin: 0px;
+	text-align: justify;
+}

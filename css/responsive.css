@@ -1,0 +1,76 @@
+/* 
+ *  Adjust format based on size of viewport
+ */
+
+
+/* For larger desktop screens, set max content width & add margins */
+@media screen and (min-width: 960px) {
+	body {
+		width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* When viewport is smaller, hide optional column */
+@media screen and (max-width: 800px) {
+	.proj-desc { display: none; }
+	.col-4     { width: 50%;    }
+}
+
+/* When even smaller, make several other adjustments */
+@media screen and (max-width: 640px) {
+
+	/* Hide logo, give full width to name text */
+	.col-3     { display: none;    }
+	.col-9     { width: 100%;      }
+	.name-text { text-align: left; }
+
+	/* Show menu and activate sidebox */
+	.menu-icon    { display: inline-block; }
+	.sidebox.open {
+		-webkit-transform: translate(500px, 0);
+		transform: translate(500px, 0);
+		transition: transform 0.3s ease;
+	}
+
+	/* Shorten description & give full width */
+	article p        { max-width: 100%; }
+	#port-desc-long  { display: none;   }
+	#port-desc-short { display: block;  }
+
+	/* Reduce size of project titles */
+	h3 { font-size: 2em; }
+}
+
+/* At the smallest, reduce even further */
+@media screen and (max-width: 520px) {
+
+	/* Portfolio list becomes one column */
+	.row       { flex-wrap: wrap; }
+	.col-4     { width: 100%;     }
+	.proj-name {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+
+	/* Shrink heading fonts */
+	h1 {
+		font-size: 2.0em;
+	}
+	h2 {
+		font-size: x-large;
+		text-align: center;
+	} 
+	h3 {
+		font-size: x-large;
+		margin-top: 0px;
+		padding-top: 0 px;
+	}
+	h4 {
+		font-size: large;
+	}
+
+	/* Adjust sidebox */
+	.sidebox { top: 180px; }
+}
