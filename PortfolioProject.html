@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<title>Portfolio Project Page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://normalize-css.googlecode.com/svn/trunk/normalize.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400">
+
+		<!-- Bootstrap files are only for modal dialogs -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+		<!-- Script files moved to end, so they load after page -->
+
+	</head>
+
+	<body>
+
+		<main class="grid">
+
+			<header class="row header-adorn">
+				<div class="col-3">
+					<img id="logo-image" src="images/udacity_logo.svg" alt="Udacity Logo">
+				</div>
+				<div class="col-9">
+					<h1 class="name-text">Randall Matamoros</h1>
+					<h4 class="name-text">Front-End Web Developer</h4>
+				</div>
+			</header>
+
+			<section id="portfolio-desc">
+				<article class="row">
+					<div class="col-12">
+						<h4 id="port-title">Udacity Project Portfolio  
+							<a id="menu" class="menu-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+								</svg>
+							</a>
+						</h4>
+						<p id="port-desc-long">The Udacity Front-End Web Developer Nanodegree is a 7-month online program that prepares students for careers in real-life web development. Graduation requires completion of a dozen courses and six development projects. The first project is this portfolio page, which has links to the other projects. This page was built with HTML and CSS as a sampler of responsive techniques to support a variety of viewport sizes.</p>
+						<p id="port-desc-short">The first project is this portfolio page, which has links to the other projects. This page was built with HTML and CSS as a sampler of responsive techniques to support a variety of viewport sizes.</p>
+					</div>
+				</article>
+			</section>
+
+			<section id="portfolio-projects">
+				<div class="row label-adorn">
+					<div class="col-12">
+						<h2>Featured Work</h2>
+					</div>
+				</div>
+				<ul id="portfolio-list">
+					<li class="row">
+						<div class="col-4">
+							<img src="images/054-min.jpg" alt="Resume Image" data-toggle="modal" data-target="#Resume">
+						</div>
+						<div class="col-4 proj-name">
+							<h3>Online Resume</h3>
+							<a class="proj-link-text" href="#">Link to Project</a>
+						</div>
+						<div class="col-4 proj-desc">
+							<p class="proj-desc-text">Due November 23, 2015</p>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-4">
+							<img src="images/101-min.jpg" alt="Game Image" data-toggle="modal" data-target="#Game">
+						</div>
+						<div class="col-4 proj-name">
+							<h3>Arcade Game</h3>
+							<a class="proj-link-text" href="#">Link to Project</a>
+						</div>
+						<div class="col-4 proj-desc">
+							<p class="proj-desc-text">Due January 4, 2016</p>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-4">
+							<img src="images/286-min.jpg" alt="Optimization Image" data-toggle="modal" data-target="#Opt">
+						</div>
+						<div class="col-4 proj-name">
+							<h3>Website Optimization</h3>
+							<a class="proj-link-text" href="#">Link to Project</a>
+						</div>
+						<div class="col-4 proj-desc">
+							<p class="proj-desc-text">Due February 1, 2016</p>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-4">
+							<img src="images/156-min.jpg" alt="Map Image" data-toggle="modal" data-target="#Map">
+						</div>
+						<div class="col-4 proj-name">
+							<h3>Neighborhood Map</h3>
+							<a class="proj-link-text" href="#">Link to Project</a>
+						</div>
+						<div class="col-4 proj-desc">
+							<p class="proj-desc-text">Due April 11, 2016</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<footer class="row footer-adorn">
+				<div class="col-12">
+					<p>Email: <a href="mailto:rmatamoros@bearriver.com">rmatamoros@bearriver.com</a></p>
+				</div>
+			</footer>
+
+		</main>
+
+
+
+		<!--                  -->
+		<!-- Sidebox Element  -->
+		<!--                  -->
+
+		<div id="drawer" class="sidebox">
+			<p id="sidebox-title">Nanodegree Program</p>
+			<p id="sidebox-text">The Udacity Front-End Web Developer Nanodegree is a 7-month online program that prepares students for careers in real-life web development. Graduation requires completion of a dozen courses and six development projects.</p>
+		</div>
+
+		<!-- Open the floater when the menu icon is clicked -->
+		<script>
+			var menu = document.querySelector('#menu');
+			var main = document.querySelector('main');
+			var drawer = document.querySelector('.sidebox');
+
+			menu.addEventListener('click', function(e) {
+				/* alert("Debug: calling open toggle") */
+				drawer.classList.toggle('open');
+				e.stopPropagation();
+			});
+
+			main.addEventListener('click', function() {
+				/* alert("Debug: calling remove") */
+				drawer.classList.remove('open');
+			});
+		</script>
+
+
+
+		<!--               -->
+		<!-- Modal dialogs -->
+		<!--               -->
+
+		<div class="modal fade" id="Resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Online Resume Page</h4>
+					</div>
+					<div class="modal-body">
+						<p>This was my second project in this class. I learned a lot about JavaScript and jQuery.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="Game" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Arcade Game Page</h4>
+					</div>
+					<div class="modal-body">
+						<p>This was my third project in this class. I learned a lot about object-oriented JavaScript and HTML5 Canvas.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="Opt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Website Optimization Page</h4>
+					</div>
+					<div class="modal-body">
+						<p>This was my fourth project in this class. I learned a lot about optimizing web pages.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="Map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Neighborhood Map Page</h4>
+					</div>
+					<div class="modal-body">
+						<p>This was my fifth project in this class. I learned a lot about AJAX and JavaScript design patterns.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Only for used modal dialogs -->
+		<script type="text/javascript" src=js/jquery-1.11.3.js></script>
+		<script type="text/javascript" src=js/bootstrap.min.js></script>
+
+	</body>
+
+</html>
